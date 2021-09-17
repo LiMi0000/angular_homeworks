@@ -1,0 +1,17 @@
+.main_card {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.card {
+  flex: 0 1 500px;
+  margin: 0.5rem 0.25em;
+}
+.card-button {
+  border: none;
+  outline: none;
+}
+.card-button:hover {
+  background-color: #999;
+  color: #fff;
+}

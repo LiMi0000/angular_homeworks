@@ -1,0 +1,38 @@
+<div class="main_card">
+  <div
+    class="card"
+    style="width: 18rem"
+    *ngFor="let gameProperties of game"
+    appColorHover
+  >
+    <div class="card-header">
+      {{ gameProperties.title | uppercase | shorten: 4 }}
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">Id: {{ gameProperties.id }}</li>
+      <li class="list-group-item">
+        Date release: {{ gameProperties.releaseDate | date: "fullDate" }}
+      </li>
+      <li class="list-group-item">
+        Rating: {{ gameProperties.rating | number: "1.0-2" }}
+      </li>
+      <li class="list-group-item">
+        Rating with % : {{ gameProperties.rating | percent }}
+      </li>
+      <li class="list-group-item">
+        Price: {{ gameProperties.price | currency: "EUR" }}
+      </li>
+      <li class="list-group-item" *ngIf="displayCardGames">
+        Description: {{ gameProperties.shortDescription }}
+      </li>
+      <li class="list-group-item">
+        Genre: {{ gameProperties.genre | uppercase }}
+      </li>
+      <li class="list-group-item">Publisher: {{ gameProperties.publisher }}</li>
+      <li class="list-group-item">Developer: {{ gameProperties.developer }}</li>
+    </ul>
+    <button type="button" class="card-button" (click)="clearDesc()">
+      show description
+    </button>
+  </div>
+</div>
