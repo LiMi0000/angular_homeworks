@@ -1,0 +1,34 @@
+<div class="cars">
+  <button routerLink="/" class="btn btn-primary">Back Home</button>
+  <h1 class="title cars_title">Rental Cars : Choose one of your dreams</h1>
+  <div class="list_cars">
+    <div class="car" *ngFor="let car of cars">
+      <div class="card" style="width: 18rem">
+        <img
+          class="card-img-top"
+          src="{{ car.img_url }}"
+          alt="Card image cap"
+        />
+        <div class="card-body">
+          <h5 class="card-title">{{ car.make }}</h5>
+          <p class="card-text">
+            Some quick example text to build on the card title and make up the
+            bulk of the card's content.
+          </p>
+        </div>
+        <ul class="list-group list-group-flush">
+          <li class="list-group-item">ID: {{ car.id }}</li>
+          <li class="list-group-item">MODEL: {{ car.model }}</li>
+          <li class="list-group-item">YEAR: {{ car.year }}</li>
+          <li class="list-group-item">HP: {{ car.horsepower }}</li>
+          <li class="list-group-item">PRICE: {{ car.price | currency }}</li>
+        </ul>
+        <div class="card-body">
+          <a [routerLink]="['/order-car', car.id]" class="btn btn-primary"
+            >Ordered Car</a
+          >
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,16 @@
+.list_cars {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.cars_title {
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 30px;
+}
+.car {
+  margin-bottom: 10px;
+}
+.btn {
+  margin: 10px 10px;
+}

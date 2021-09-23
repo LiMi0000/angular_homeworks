@@ -1,0 +1,23 @@
+<button routerLink="/cars" class="btn btn-primary">GO BACK</button>
+
+<div class="list_cars">
+  <div class="car">
+    <div class="card" style="width: 18rem">
+      <img class="card-img-top" src="{{ car.img_url }}" alt="Card image cap" />
+      <div class="card-body">
+        <h5 class="card-title">{{ car.make }}</h5>
+        <p class="card-text">
+          Some quick example text to build on the card title and make up the
+          bulk of the card's content.
+        </p>
+      </div>
+      <ul class="list-group list-group-flush">
+        <li class="list-group-item">ID: {{ car.id }}</li>
+        <li class="list-group-item">MODEL: {{ car.model }}</li>
+        <li class="list-group-item">YEAR: {{ car.year }}</li>
+        <li class="list-group-item">HP: {{ car.horsepower }}</li>
+        <li class="list-group-item">PRICE: {{ car.price | currency }}</li>
+      </ul>
+    </div>
+  </div>
+</div>

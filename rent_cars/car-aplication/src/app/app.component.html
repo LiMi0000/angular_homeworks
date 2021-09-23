@@ -1,0 +1,30 @@
+<div class="main">
+  <div class="title main_title">
+    <h2>RENT A CAR</h2>
+  </div>
+
+  <ul class="list main_list">
+    <li
+      routerLink="/"
+      routerLinkActive="routerLinkActiveCss"
+      [routerLinkActiveOptions]="{ exact: true }"
+    >
+      Home
+      <div></div>
+    </li>
+    <li routerLink="/cars" routerLinkActive="routerLinkActiveCss">
+      Cars
+      <div></div>
+    </li>
+    <li routerLink="/order-car/id" routerLinkActive="routerLinkActiveCss">
+      Ordered Cars
+      <div></div>
+    </li>
+    <li [routerLink]="['contact']" routerLinkActive="routerLinkActiveCss">
+      Contact
+      <div></div>
+    </li>
+  </ul>
+</div>
+
+<router-outlet></router-outlet>
