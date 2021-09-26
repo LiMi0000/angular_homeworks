@@ -15,4 +15,8 @@ export class CarsComponent implements OnInit {
   ngOnInit(): void {
     this.cars = this.carService.loadCars();
   }
+
+  orderCar(car: Car) {
+    this.carService.handleOrderCar(car);
+  }
 }

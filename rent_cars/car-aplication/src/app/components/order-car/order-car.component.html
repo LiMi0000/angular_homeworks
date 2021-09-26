@@ -1,6 +1,6 @@
 <button routerLink="/cars" class="btn btn-primary">GO BACK</button>
 
-<div class="list_cars">
+<div class="cars_list" *ngFor="let car of carsOrdered">
   <div class="car">
     <div class="card" style="width: 18rem">
       <img class="card-img-top" src="{{ car.img_url }}" alt="Card image cap" />

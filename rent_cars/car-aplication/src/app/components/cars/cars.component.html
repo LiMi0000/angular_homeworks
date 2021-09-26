@@ -24,9 +24,10 @@
           <li class="list-group-item">PRICE: {{ car.price | currency }}</li>
         </ul>
         <div class="card-body">
-          <a [routerLink]="['/order-car', car.id]" class="btn btn-primary"
-            >Ordered Car</a
+          <a [routerLink]="['/car-details', car.id]" class="btn btn-primary"
+            >View Details</a
           >
+          <a class="btn btn-primary" (click)="orderCar(car)">Ordered Car</a>
         </div>
       </div>
     </div>

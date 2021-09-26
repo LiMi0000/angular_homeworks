@@ -8,12 +8,12 @@ import { RouterModule, Routes } from '@angular/router';
 import { OrderCarComponent } from './components/order-car/order-car.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { CarComponent } from './components/car/car.component';
-import { FormsModule } from '@angular/forms';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
   { path: 'cars', component: CarsComponent },
   { path: 'order-car/:id', component: OrderCarComponent },
+  { path: 'car-details/:id', component: CarComponent },
   { path: 'contact', component: ContactComponent },
 ];
 

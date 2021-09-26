@@ -7,6 +7,10 @@ import { Car } from '../interfaces/car';
 export class CarService {
   constructor() {}
 
+  carsOrdered: Car[] = [];
+
+  carDetails: Car[] = [];
+
   private cars: Car[] = [
     {
       year: 2016,
@@ -140,5 +144,9 @@ export class CarService {
 
   loadCarsById(id: string | number) {
     return this.cars.filter((car) => car.id === id);
+  }
+
+  handleOrderCar(car: Car) {
+    this.carsOrdered.push(car);
   }
 }

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Car } from 'src/app/interfaces/car';
 import { CarService } from 'src/app/services/car.service';
@@ -11,13 +11,15 @@ import { CarService } from 'src/app/services/car.service';
 export class OrderCarComponent implements OnInit {
   constructor(private route: ActivatedRoute, private carService: CarService) {}
 
-  car: Car;
+  carsOrdered: Car[] = [];
 
   ngOnInit(): void {
     console.log('id:', this.route.snapshot.params['id']);
 
-    const carId = this.route.snapshot.params['id'];
+    // const carId = this.route.snapshot.params['id'];
 
-    this.car = this.carService.loadCarsById(parseInt(carId))[0];
+    // this.car = this.carService.loadCarsById(parseInt(carId))[0];
+
+    this.carsOrdered = this.carService.carsOrdered;
   }
 }
