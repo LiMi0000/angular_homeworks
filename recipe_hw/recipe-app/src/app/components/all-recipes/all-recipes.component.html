@@ -1,0 +1,28 @@
+<div class="all-recipes">
+  <div class="card" style="width: 18rem" *ngFor="let recipe of recipes">
+    <img class="card-img-top" src="{{ recipe.image }}" alt="Card image cap" />
+    <div class="card-body">
+      <h5 class="card-title">{{ recipe.title }}</h5>
+      <p class="card-text">
+        {{ recipe.description }}
+      </p>
+    </div>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">{{ recipe.id }}</li>
+      <li class="list-group-item">{{ recipe.ingredients }}</li>
+      <li class="list-group-item">Vestibulum at eros</li>
+    </ul>
+    <div class="card-body">
+      <button
+        class="btn btn-primary"
+        [routerLink]="['/edit-recipe', recipe.id]"
+        (click)="setRecipeForUpdate(recipe.id)"
+      >
+        Edit
+      </button>
+      <button class="btn btn-danger" (click)="deleteRecipe(recipe)">
+        Delete
+      </button>
+    </div>
+  </div>
+</div>
