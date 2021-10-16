@@ -1,0 +1,19 @@
+.form-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.title {
+  width: 50%;
+}
+
+.description {
+  width: 50%;
+}
+button {
+  margin-top: 30px;
+}
+label {
+  font-size: 24px;
+  font-weight: bold;
+}

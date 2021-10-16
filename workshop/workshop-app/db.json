@@ -1,0 +1,25 @@
+{
+    "exercises": [
+        {
+            "id": "1",
+            "title": "exercise - NodeJS",
+            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi quo possimus reprehenderit libero, voluptas cum laboriosam nam voluptate? Quam pariatur cum cumque obcaecati est placeat! Ratione laboriosam facere amet quis!",
+            "date": "2021-10-16",
+            "progress": "0.14"
+        },
+        {
+            "id": "2",
+            "title": "exercise - ReactJS",
+            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi quo possimus reprehenderit libero, voluptas cum laboriosam nam voluptate? Quam pariatur cum cumque obcaecati est placeat! Ratione laboriosam facere amet quis!",
+            "date": "2021-10-5",
+            "progress": "0.54"
+        },
+        {
+            "id": "1",
+            "title": "exercise - Angular",
+            "description": "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Animi quo possimus reprehenderit libero, voluptas cum laboriosam nam voluptate? Quam pariatur cum cumque obcaecati est placeat! Ratione laboriosam facere amet quis!",
+            "date": "2021-10-27",
+            "progress": "0.22"
+        }
+    ]
+}

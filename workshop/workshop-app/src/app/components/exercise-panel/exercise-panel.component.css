@@ -1,0 +1,6 @@
+.exercise-panels {
+  display: flex;
+}
+.card {
+  margin: 30px 50px;
+}

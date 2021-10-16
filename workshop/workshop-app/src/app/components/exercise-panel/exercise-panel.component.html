@@ -1,0 +1,34 @@
+<div class="exercise-panels">
+  <div class="panel" *ngFor="let exercise of exercises">
+    <div
+      class="card"
+      style="width: 18rem"
+      (click)="onDisplayExercise(exercise)"
+    >
+      <div class="card-body">
+        <h5 class="card-title">{{ exercise.title | titlecase }}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{ exercise.id }}</h6>
+        <p class="card-text">
+          {{ exercise.description }}
+        </p>
+        <h6 class="card-subtitle mb-2 text-muted">
+          {{ exercise.progress }}
+        </h6>
+        <h6 class="card-subtitle mb-2 text-muted">
+          {{ exercise.date }}
+        </h6>
+        <button href="#" class="btn btn-info" style="margin-right: 10px">
+          Edit
+        </button>
+        <button href="#" class="btn btn-danger">Delete</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<hr />
+
+<app-exercise-card
+  [displayedExercise]="exerciseDisplay"
+  *ngIf="exerciseDisplay"
+></app-exercise-card>

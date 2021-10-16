@@ -1,0 +1,27 @@
+<form (ngSubmit)="onCreateExercise()" [formGroup]="newExerciseForm">
+  <div class="form-group">
+    <label for="name">Title</label>
+    <input
+      class="title"
+      type="text"
+      name="title"
+      id="title"
+      formControlName="title"
+      autocomplete="off"
+      placeholder="Title for the exercise..."
+    />
+    <br />
+    <label for="description">Description</label>
+    <textarea
+      cols="20"
+      rows="10"
+      type="text"
+      class="description"
+      name="description"
+      id="description"
+      formControlName="description"
+      autocomplete="off"
+    ></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
