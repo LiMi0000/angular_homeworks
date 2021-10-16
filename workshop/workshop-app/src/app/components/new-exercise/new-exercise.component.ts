@@ -11,6 +11,7 @@ export class NewExerciseComponent implements OnInit {
   constructor() {}
 
   newExerciseForm: FormGroup;
+  exercises: Exercise;
 
   ngOnInit(): void {
     this.iniForm();
